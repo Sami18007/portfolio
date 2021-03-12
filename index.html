@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link href="./res/styles.css" rel="stylesheet" />
+        <script src="./res/index.js"></script>
+        <script src="https://kit.fontawesome.com/dd73175a5d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <img id="Bg-image" src="./res/images/triangle.svg" alt="Triangle" />
+        <header id="Page-header">
+            <h3>Portfolio</h3>
+        </header>
+        <div id="Content-table">
+            <div class="Project">
+                <h1>1# Pizza verkkokauppa - Front-End</h1>
+                <div>
+                    <div>
+                        <p class="Project-introduction">
+                            Valitse täytteet pizzaasi ja tilaa. Tämä harjoitusprojekti 
+                            koostuu front-end:stä ja back-end:stä. Voit halutessasi
+                            kirjautua sisään ennen tilausta. Kirjautumalla näet 
+                            tilaushistoriasi myöhemmin. Käyttäjät voivat kirjautumisen 
+                            jälkeen myös muokata käyttäjätietojaan.
+                        </p>
+                        <hr class="Short-line"/>
+                        <p class="Project-details">
+                            React, TypeScript, Axios, InkScape
+                        </p>
+                        <div class="Links">
+                            <a href="https://my-online-store-frontend.herokuapp.com/menu"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-play"></i>
+                                <span>Kokeile!</span>
+                            </a>
+                            <a href="https://gitlab.com/SamiAa/online-store-frontend"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-gitlab"></i>
+                                <span>Näytä koodi!</span>
+                            </a>
+                        </div>
+                    </div>
+                    <img class="Project-image"
+                        src="./res/images/online-store-frontend-img.png"
+                        alt="Pizza store frontend" />
+                </div>
+            </div>
+            <div class="Project">
+                <h1>2# Pizza verkkokauppa - Back-End</h1>
+                <div>
+                    <div>
+                        <p class="Project-introduction">
+                            Tämä on pizza verkkokaupan back-end. Se on yhteydessä 
+                            tietokantaan, jonne sekä käyttäjät että tilaukset tallennetaan. 
+                            Jotkin rajapinnat vaativat käyttäjän autentikointia, joka 
+                            hoidetaan tokenin avulla. Rajapinnat: GET "/", POST "/login", 
+                            POST "/users", GET "/users/:username", PUT "/users/:username", 
+                            GET "/users/:username/orders" sekä POST "/orders".
+                        </p>
+                        <hr class="Short-line"/>
+                        <p class="Project-details">
+                            NodeJS, Express, JavaScript, Mongoose, Bcrypt, 
+                            JSONWebToken, dotenv
+                        </p>
+                        <div class="Links">
+                            <!-- <a href="#">
+                                <i class="fas fa-play"></i>
+                                <span>Kokeile!</span>
+                            </a> -->
+                            <a href="https://my-online-store-backend.herokuapp.com/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-gitlab"></i>
+                                <span>Näytä koodi!</span>
+                            </a>
+                        </div>
+                    </div>
+                    <img class="Project-image"
+                        src="./res/images/online-store-backend-img.png"
+                        alt="Pizza store frontend" />
+                </div>
+            </div>
+        </div>
+        <!-- <footer id="Page-footer"></footer> -->
+    </body>
+</html>
