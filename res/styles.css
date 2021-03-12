@@ -93,9 +93,6 @@ i {
 
 .Project > div {
     display: flex;
-    /* flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start; */
     flex-direction: column-reverse;
 }
 
@@ -105,15 +102,9 @@ i {
 
 .Short-line {
     margin-right: 60%;
-    border: 1px solid bisque;
+    border: 2px solid bisque;
     border-radius: 10px;
 }
-
-/* .Long-line {
-    margin: 0 20%;
-    border: 1px solid bisque;
-    border-radius: 10px;
-} */
 
 .Links {
     margin: 40px 0;
@@ -137,7 +128,6 @@ i {
     width: max-content;
     margin-top: 10px;
     text-decoration: underline;
-    /* background-color: burlywood; */
     transition: color 0.25s, width 0.25s;
     -o-transition: color 0.25s, width 0.25s;
     -moz-transition: color 0.25s, width 0.25s;
@@ -198,17 +188,11 @@ i {
 
 .Project-introduction {
     margin-top: 0;
-    /* margin-right: 40px; */
 }
 
 .Project-details {
     font-style: italic;
 }
-
-/* #Page-footer {
-    width: 100%;
-    height: 16vh;
-} */
 
 @media only screen and (min-width: 992px) {
     i {
@@ -223,6 +207,12 @@ i {
 
     .Project > div > div {
         margin-right: 40px;
+    }
+
+    .Short-line {
+        margin-right: 60%;
+        border: 2px solid bisque;
+        border-radius: 10px;
     }
 
     .Project-image {
@@ -240,6 +230,12 @@ i {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .Short-line {
+        margin-right: 80%;
+        border: 2px solid bisque;
+        border-radius: 10px;
     }
 
     .Project-image {
