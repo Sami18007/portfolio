@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Portfolio</title>
-        <link rel="icon" type="image/png" href="./res/images/favicon.png"/>
+        <link rel="icon" type="image/png" href="./res/images/triangle.svg"/>
         <link href="./res/styles.css" rel="stylesheet" />
         <script src="./res/index.js"></script>
         <script src="https://kit.fontawesome.com/dd73175a5d.js" crossorigin="anonymous"></script>
@@ -15,15 +15,55 @@
         </header>
         <div id="Content-table">
             <div class="Project">
-                <h1>1# Pizza verkkokauppa - Front-End</h1>
+                <h1>1# Kuvantunnistusohjelma - Front-End</h1>
+                <div>
+                    <div>
+                        <p class="Project-introduction">
+                            Piirrä kuva eläimestä ja anna syväoppimismallin arvioida, 
+                            mitä eläintä se esittää. Tämä projekti toteutettiin ryhmätyönä, 
+                            mutta front-end on kokonaan omaa käsialaani. Projektin avulla 
+                            opin teoriaa ja käytäntöä neuroverkkojen toiminnasta sekä kehitin 
+                            front-end osaamistani.
+                        </p>
+                        <hr class="Short-line"/>
+                        <p class="Project-details">
+                            React, JavaScript, Axios, InkScape
+                        </p>
+                        <div class="Links">
+                            <a href="https://animal-drawing-app-front-end.herokuapp.com/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-play"></i>
+                                <span>Kokeile!</span>
+                            </a>
+                            <a href="https://gitlab.com/SamiAa/animal-drawing-app"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-gitlab"></i>
+                                <span>Näytä koodi!</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Project-image-wrapper">
+                        <img class="Project-image"
+                            src="./res/images/animal-drawing-app.png"
+                            alt="Pizza store frontend"
+                            onclick="showImage('./res/images/animal-drawing-app.png')" />
+                    </div>
+                </div>
+            </div>
+            <div class="Project">
+                <h1>2# Verkkokauppa - Front-End</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
                             Valitse täytteet pizzaasi ja tilaa. Tämä harjoitusprojekti 
-                            koostuu front-end:stä ja back-end:stä. Voit halutessasi
+                            koostuu front-end:stä ja back-end:stä. Voit halutessasi 
                             kirjautua sisään ennen tilausta. Kirjautumalla näet 
                             tilaushistoriasi myöhemmin. Käyttäjät voivat kirjautumisen 
-                            jälkeen myös muokata käyttäjätietojaan.
+                            jälkeen myös muokata käyttäjätietojaan. Tämän projektin 
+                            avulla opin muun muassa TypeScriptiä sekä vektorikuvien 
+                            piirtämistä InkScapen avulla.
                         </p>
                         <hr class="Short-line"/>
                         <p class="Project-details">
@@ -44,26 +84,30 @@
                             </a>
                         </div>
                     </div>
-                    <img class="Project-image"
-                        src="./res/images/online-store-frontend-img.png"
-                        alt="Pizza store frontend" />
+                    <div class="Project-image-wrapper">
+                        <img class="Project-image"
+                            src="./res/images/online-store-frontend-img.png"
+                            alt="Pizza store frontend"
+                            onclick="showImage('./res/images/online-store-frontend-img.png')" />
+                    </div>
                 </div>
             </div>
             <div class="Project">
-                <h1>2# Pizza verkkokauppa - Back-End</h1>
+                <h1>2# Verkkokauppa - Back-End</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Tämä on pizza verkkokaupan back-end. Se on yhteydessä 
-                            tietokantaan, jonne sekä käyttäjät että tilaukset tallennetaan. 
-                            Jotkin rajapinnat vaativat käyttäjän autentikointia, joka 
-                            hoidetaan tokenin avulla. Rajapinnat: GET "/", POST "/login", 
+                            Tämä on pizza verkkokaupan MongoDB-tietokantaan yhteydessä 
+                            oleva taustajärjestelmä, jonne sekä käyttäjät että tilaukset 
+                            tallennetaan. Jotkin rajapinnat vaativat käyttäjän autentikointia, 
+                            joka hoidetaan tokenin avulla. Rajapinnat: GET "/", POST "/login", 
                             POST "/users", GET "/users/:username", PUT "/users/:username", 
-                            GET "/users/:username/orders" sekä POST "/orders".
+                            GET "/users/:username/orders" sekä POST "/orders". Tämän projektin 
+                            avulla opin sekä Mongoosen että JSONWebTokenin käyttöä.
                         </p>
                         <hr class="Short-line"/>
                         <p class="Project-details">
-                            NodeJS, Express, JavaScript, Mongoose, Bcrypt, 
+                            Express, JavaScript, Mongoose, Bcrypt, 
                             JSONWebToken, dotenv
                         </p>
                         <div class="Links">
@@ -75,11 +119,27 @@
                             </a>
                         </div>
                     </div>
-                    <img class="Project-image"
-                        src="./res/images/online-store-backend-img.png"
-                        alt="Pizza store frontend" />
+                    <div class="Project-image-wrapper">
+                        <img class="Project-image"
+                            src="./res/images/online-store-backend-img.png"
+                            alt="Pizza store frontend"
+                            onclick="showImage('./res/images/online-store-backend-img.png')" />
+                    </div>
                 </div>
             </div>
+        </div>
+        <footer id="Page-footer">
+            <h4>19.3.2021</h4>
+        </footer>
+        <div id="Image-viewer">
+            <div class="Bg-color"></div>
+            <img id="Image-viewer-img"
+                src="./res/images/animal-drawing-app.png"
+                alt="Large project image"/>
+            <button id="Image-viewer-exit-button"
+                onclick="hideImage()">X</button>
+            <!-- <div class="Exit-button-wrapper">
+            </div> -->
         </div>
     </body>
 </html>
