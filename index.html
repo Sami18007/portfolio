@@ -25,7 +25,7 @@
                             opin teoriaa ja käytäntöä neuroverkkojen toiminnasta sekä kehitin 
                             front-end osaamistani.
                         </p>
-                        <hr class="Short-line"/>
+                        <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
                             React, JavaScript, Axios, InkScape
                         </p>
@@ -44,12 +44,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="Project-image-wrapper">
+                    <button id="Project-image-wrapper-for-animal-drawing-app"
+                        class="Project-image-wrapper"
+                        onclick="showImage('./res/images/animal-drawing-app.png')"
+                    >
                         <img class="Project-image"
                             src="./res/images/animal-drawing-app.png"
                             alt="Pizza store frontend"
-                            onclick="showImage('./res/images/animal-drawing-app.png')" />
-                    </div>
+                        />
+                    </button>
                 </div>
             </div>
             <div class="Project">
@@ -65,7 +68,7 @@
                             avulla opin muun muassa TypeScriptiä sekä vektorikuvien 
                             piirtämistä InkScapen avulla.
                         </p>
-                        <hr class="Short-line"/>
+                        <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
                             React, TypeScript, Axios, InkScape
                         </p>
@@ -84,12 +87,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="Project-image-wrapper">
+                    <button id="Project-image-wrapper-for-online-store-frontend-img"
+                        class="Project-image-wrapper"
+                        onclick="showImage('./res/images/online-store-frontend-img.png')"
+                    >
                         <img class="Project-image"
                             src="./res/images/online-store-frontend-img.png"
                             alt="Pizza store frontend"
-                            onclick="showImage('./res/images/online-store-frontend-img.png')" />
-                    </div>
+                        />
+                    </button>
                 </div>
             </div>
             <div class="Project">
@@ -105,7 +111,7 @@
                             GET "/users/:username/orders" sekä POST "/orders". Tämän projektin 
                             avulla opin sekä Mongoosen että JSONWebTokenin käyttöä.
                         </p>
-                        <hr class="Short-line"/>
+                        <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
                             Express, JavaScript, Mongoose, Bcrypt, 
                             JSONWebToken, dotenv
@@ -119,25 +125,35 @@
                             </a>
                         </div>
                     </div>
-                    <div class="Project-image-wrapper">
+                    <button id="Project-image-wrapper-for-online-store-backend-img"
+                        class="Project-image-wrapper"
+                        onclick="showImage('./res/images/online-store-backend-img.png')"
+                    >
                         <img class="Project-image"
                             src="./res/images/online-store-backend-img.png"
                             alt="Pizza store frontend"
-                            onclick="showImage('./res/images/online-store-backend-img.png')" />
-                    </div>
+                        />
+                    </button>
                 </div>
             </div>
         </div>
         <footer id="Page-footer">
             <h4>19.3.2021</h4>
         </footer>
-        <div id="Image-viewer">
+        <div id="Image-viewer"
+            state="closed"
+        >
+            <div id="Image-viewer-backdrop"></div>
             <div class="Bg-color"></div>
             <img id="Image-viewer-img"
                 src="./res/images/animal-drawing-app.png"
-                alt="Large project image"/>
+                alt="Large project image"
+            />
             <button id="Image-viewer-exit-button"
-                onclick="hideImage()">X</button>
+                onclick="hideImage()"
+            >
+                X
+            </button>
             <!-- <div class="Exit-button-wrapper">
             </div> -->
         </div>

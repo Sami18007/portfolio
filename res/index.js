@@ -36,14 +36,18 @@ const initialize = () => {
 const showImage = (imageSrc) => {
     imageViewerImg.src = imageSrc;
     // imageViewer.style.visibility = "visible";
-    imageViewer.style.right = "0";
+    imageViewer.style.left = "0";
+    imageViewer.setAttribute('state', 'opened');
     // disableScroll();
+    shiftFocusToExit();
 };
 
 const hideImage = () => {
     // imageViewer.style.visibility = "hidden";
-    imageViewer.style.right = "-100%";
+    imageViewer.style.left = "-100%";
+    imageViewer.setAttribute('state', 'closed');
     // enableScroll();
+    shiftFocusBack();
 };
 
 const disableScroll = () => {
@@ -55,3 +59,15 @@ const enableScroll = () => {
     document.body.style.height = "auto";
     document.body.style.overflow = "visible";
 };
+
+const shiftFocusToExit = () => {
+    document.getElementById('Image-viewer-exit-button').focus();
+}
+
+const shiftFocusBack = () => {
+    const imageName = document.getElementById('Image-viewer-img')
+        .getAttribute('src')
+        .replace('.png', '')
+        .split('/')[3];
+    document.getElementById('Project-image-wrapper-for-' + imageName).focus();
+}
