@@ -15,15 +15,63 @@
         </header>
         <div id="Content-table">
             <div class="Project">
-                <h1>1# Kuvantunnistusohjelma - Front-End</h1>
+                <h1>1# AWS-audioanalyysi</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Piirrä kuva eläimestä ja anna syväoppimismallin arvioida, 
-                            mitä eläintä se esittää. Tämä projekti toteutettiin ryhmätyönä, 
-                            mutta front-end on kokonaan omaa käsialaani. Projektin avulla 
-                            opin teoriaa ja käytäntöä neuroverkkojen toiminnasta sekä kehitin 
-                            front-end osaamistani.
+                            Luo AWS-pilviresursseja, kuten S3-tallennustilaa, 
+                            DynamoDB-tietokanta, SQS-viestipalvelu ja Lambda-funktio.
+                            Ohjelmalle voidaan lähettää äänitiedostoja, jotka 
+                            tallennetaan S3:een. Tämä prosessi saa aikaan viestin 
+                            lähettämisen SQS:lle, joka välittää viestin eteenpäin 
+                            Lambda-funktiolle. Lambda-funktio hakee äskettäin 
+                            lähetetyn äänitiedoston S3-tallennustilasta, kääntää
+                            tiedoston tekstiksi ja tekee sille tunneanalyysin. 
+                            Analyysin tulokset tallennetaan lopuksi DynamoDB-tietokantaan.
+                            Tietokantaan tallennetut analyysien tulokset voidaan 
+                            hakea ja näyttää. Luodut AWS-resurssit voidaan myös poistaa
+                            tämän ohjelman kautta. Ohjelma ajetaan konsolissa. Projektin
+                            aikana opin huomattavasti lisää Python-ohjelmoinnista sekä
+                            AWS-pilvipalvelusta.
+                        </p>
+                        <!-- <hr class="Short-line"/> -->
+                        <p class="Project-details">
+                            Python, boto3, AWS-pilvipalvelu
+                        </p>
+                        <div class="Links">
+                            <a href="https://gitlab.com/SamiAa/cloud-platform-development-coursework"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-gitlab"></i>
+                                <span>Näytä koodi!</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button id="Project-image-wrapper-for-aws-audio-analysis-app"
+                        class="Project-image-wrapper"
+                        onclick="showImage('./res/images/aws-audio-analysis-app.png')"
+                    >
+                        <img class="Project-image"
+                            src="./res/images/aws-audio-analysis-app.png"
+                            alt=""
+                        />
+                    </button>
+                </div>
+            </div>
+            <div class="Project">
+                <h1>2# Kuvantunnistus - Frontend</h1>
+                <div>
+                    <div>
+                        <p class="Project-introduction">
+                            Piirrä kuva yhdestä viidestä eläinvaihtoehdosta ja 
+                            anna syväoppimismallin arvioida, mitä niistä eläimistä 
+                            piirros esittää. Tämä projekti oli kurssityö ja se 
+                            toteutettiin ryhmätyönä. Frontend rakennettiin Reactilla 
+                            ja backend Flaskilla. Projektin avulla opin teoriaa 
+                            ja käytäntöä neuroverkkojen toiminnasta, tutustuin Pythonilla
+                            ohjelmointiin ja Keras-koneoppimiskirjastoon sekä kehitin 
+                            frontend osaamistani, kuten asynkronisten kutsujen 
+                            käsittelyä.
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
@@ -50,23 +98,25 @@
                     >
                         <img class="Project-image"
                             src="./res/images/animal-drawing-app.png"
-                            alt="Pizza store frontend"
+                            loading="lazy"
+                            alt=""
                         />
                     </button>
                 </div>
             </div>
             <div class="Project">
-                <h1>2# Verkkokauppa - Front-End</h1>
+                <h1>3# Verkkokauppa - Frontend</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
                             Valitse täytteet pizzaasi ja tilaa. Tämä harjoitusprojekti 
-                            koostuu front-end:stä ja back-end:stä. Voit halutessasi 
-                            kirjautua sisään ennen tilausta. Kirjautumalla näet 
-                            tilaushistoriasi myöhemmin. Käyttäjät voivat kirjautumisen 
-                            jälkeen myös muokata käyttäjätietojaan. Tämän projektin 
-                            avulla opin muun muassa TypeScriptiä sekä vektorikuvien 
-                            piirtämistä InkScapen avulla.
+                            koostuu sekä frontendistä, että backendistä. Voit halutessasi 
+                            liittyä jäseneksi ja kirjautua sisään ennen tilausta. 
+                            Kirjautumalla näet tilaushistoriasi myöhemminkin. 
+                            Käyttäjät voivat kirjautumisen jälkeen myös muokata 
+                            käyttäjätietojaan. Tämän projektin avulla opin muun muassa 
+                            TypeScriptiä yhdessä Reactin kanssa, asynkronisten
+                            kutsujen hyödyntämisestä ja Promiseista.
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
@@ -93,23 +143,26 @@
                     >
                         <img class="Project-image"
                             src="./res/images/online-store-frontend-img.png"
-                            alt="Pizza store frontend"
+                            loading="lazy"
+                            alt=""
                         />
                     </button>
                 </div>
             </div>
             <div class="Project">
-                <h1>2# Verkkokauppa - Back-End</h1>
+                <h1>4# Verkkokauppa - Backend</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Tämä on pizza verkkokaupan MongoDB-tietokantaan yhteydessä 
-                            oleva taustajärjestelmä, jonne sekä käyttäjät että tilaukset 
-                            tallennetaan. Jotkin rajapinnat vaativat käyttäjän autentikointia, 
-                            joka hoidetaan tokenin avulla. Rajapinnat: GET "/", POST "/login", 
-                            POST "/users", GET "/users/:username", PUT "/users/:username", 
-                            GET "/users/:username/orders" sekä POST "/orders". Tämän projektin 
-                            avulla opin sekä Mongoosen että JSONWebTokenin käyttöä.
+                            Tämä on pizza-verkkokaupan MongoDB-tietokantaan yhteydessä 
+                            oleva Express-taustajärjestelmä. Jotkin rajapinnat vaativat 
+                            käyttäjän autentikointia, joka suoritetaan tokenilla. 
+                            Tämän projektin aikana opin sekä MongoDB-tietokannan 
+                            hallinnoimista Mongoose-kirjaston avulla, että käyttäjän 
+                            autentikoinnista JSONWebTokenia käyttäen.<br/><br/>
+                            Rajapinnat: GET "/", POST "/login", POST "/users", 
+                            GET "/users/:username", PUT "/users/:username", 
+                            GET "/users/:username/orders" sekä POST "/orders".
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
@@ -131,7 +184,8 @@
                     >
                         <img class="Project-image"
                             src="./res/images/online-store-backend-img.png"
-                            alt="Pizza store frontend"
+                            loading="lazy"
+                            alt=""
                         />
                     </button>
                 </div>
@@ -146,7 +200,7 @@
             <div id="Image-viewer-backdrop"></div>
             <div class="Bg-color"></div>
             <img id="Image-viewer-img"
-                src="./res/images/animal-drawing-app.png"
+                src="./res/images/aws-audio-analysis-app.png"
                 alt="Large project image"
             />
             <button id="Image-viewer-exit-button"
