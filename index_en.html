@@ -12,37 +12,37 @@
         <img id="Bg-image" src="./res/images/triangle.svg" alt="Triangle" />
         <header id="Page-header">
             <h3>Portfolio</h3>
-            <a href="./index_en.html"
+            <a href="./index.html"
                 target="_self"
                 rel="alternate"
             >
-                English
+                Suomi
             </a>
         </header>
         <div id="Content-table">
             <div class="Project">
-                <h1>1# AWS-audioanalyysi</h1>
+                <h1>1# AWS audio analyzer</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Luo AWS-pilviresursseja, kuten S3-tallennustilaa, 
-                            DynamoDB-tietokanta, SQS-viestipalvelu ja Lambda-funktio.
-                            Ohjelmalle voidaan lähettää äänitiedostoja, jotka 
-                            tallennetaan S3:een. Tämä prosessi saa aikaan viestin 
-                            lähettämisen SQS:lle, joka välittää viestin eteenpäin 
-                            Lambda-funktiolle. Lambda-funktio hakee äskettäin 
-                            lähetetyn äänitiedoston S3-tallennustilasta, kääntää
-                            tiedoston tekstiksi ja tekee sille tunneanalyysin. 
-                            Analyysin tulokset tallennetaan lopuksi DynamoDB-tietokantaan.
-                            Tietokantaan tallennetut analyysien tulokset voidaan 
-                            hakea ja näyttää. Luodut AWS-resurssit voidaan myös poistaa
-                            tämän ohjelman kautta. Ohjelma ajetaan konsolissa. Projektin
-                            aikana opin huomattavasti lisää Python-ohjelmoinnista sekä
-                            AWS-pilvipalvelusta.
+                            Create AWS cloud resources like S3 storage, 
+                            DynamoDB database table, SQS messaging service and Lambda 
+                            function. Audio files can then be sent for analyzing. 
+                            Sent files will be saved in the S3 bucket which triggers 
+                            sending a message for the SQS service. SQS forwards 
+                            the message into the Lambda function which in turn will 
+                            fetch those freshly sent audio files from the S3 storage. 
+                            Then, the audio files are transcribed into text and 
+                            a sentiment analysis is run. The final scores are saved 
+                            in the DynamoDB table from where they can be fetched to 
+                            view them. Created AWS resources can be deleted through 
+                            this app. All of this can be done in the console. During 
+                            this project I learned a lot about Python programming and 
+                            AWS cloud service.
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
-                            Python, boto3, AWS-pilvipalvelu
+                            Python, boto3, AWS cloud service
                         </p>
                         <div class="Links">
                             <a href="https://gitlab.com/SamiAa/cloud-platform-development-coursework"
@@ -50,7 +50,7 @@
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fab fa-gitlab"></i>
-                                <span>Näytä koodi!</span>
+                                <span>View the code!</span>
                             </a>
                         </div>
                     </div>
@@ -66,19 +66,19 @@
                 </div>
             </div>
             <div class="Project">
-                <h1>2# Kuvantunnistus - Frontend</h1>
+                <h1>2# Image recognition - Frontend</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Piirrä kuva yhdestä viidestä eläinvaihtoehdosta ja 
-                            anna syväoppimismallin arvioida, mitä niistä eläimistä 
-                            piirros esittää. Tämä projekti oli kurssityö ja se 
-                            toteutettiin ryhmätyönä. Frontend rakennettiin Reactilla 
-                            ja backend Flaskilla. Projektin avulla opin teoriaa 
-                            ja käytäntöä neuroverkkojen toiminnasta, tutustuin Pythonilla
-                            ohjelmointiin ja Keras-koneoppimiskirjastoon sekä kehitin 
-                            frontend osaamistani, kuten asynkronisten kutsujen 
-                            käsittelyä.
+                            Draw an image of one of the five supported animals and 
+                            let the deep learning model predict what animal the image 
+                            represents. This project was a coursework and it was done 
+                            with a group. The frontend was built with React and the 
+                            backend with Flask. From this project, I learned a lot about 
+                            how neural networks work in theory and in practise and how 
+                            Keras machine learning library can be used to solve problems. 
+                            I also got to learn of Python programming and improve my 
+                            skills with asyncronic call.
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
@@ -90,14 +90,14 @@
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fas fa-play"></i>
-                                <span>Kokeile!</span>
+                                <span>Try the app!</span>
                             </a>
                             <a href="https://gitlab.com/SamiAa/animal-drawing-app"
                                 target="_blank"
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fab fa-gitlab"></i>
-                                <span>Näytä koodi!</span>
+                                <span>View the code!</span>
                             </a>
                         </div>
                     </div>
@@ -114,18 +114,17 @@
                 </div>
             </div>
             <div class="Project">
-                <h1>3# Pizza-verkkokauppa - Frontend</h1>
+                <h1>3# Pizza online store - Frontend</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Valitse täytteet pizzaasi ja tilaa. Voit halutessasi 
-                            liittyä jäseneksi ja kirjautua sisään ennen tilausta. 
-                            Kirjautumalla näet tilaushistoriasi myöhemminkin. 
-                            Käyttäjät voivat kirjautumisen jälkeen myös muokata 
-                            käyttäjätietojaan. Tämän projektin avulla opin muun muassa 
-                            TypeScriptiä yhdessä Reactin kanssa, asynkronisten
-                            kutsujen hyödyntämisestä ja Promiseista. Tämä harjoitusprojekti 
-                            koostuu sekä frontendistä, että backendistä.
+                            Choose toppings of your liking on your pizza and order. 
+                            You can join as a member if you would like and sign in 
+                            before ordering. This way you can view your ordering history 
+                            at a later time. Signed in users can also modify their 
+                            personal information. This project taught me TypeScript 
+                            with React, how to use and manage asyncronic calls and 
+                            Promises. This project consists of frontend and backend.
                         </p>
                         <!-- <hr class="Short-line"/> -->
                         <p class="Project-details">
@@ -137,14 +136,14 @@
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fas fa-play"></i>
-                                <span>Kokeile!</span>
+                                <span>Try the app!</span>
                             </a>
                             <a href="https://gitlab.com/SamiAa/online-store-frontend"
                                 target="_blank"
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fab fa-gitlab"></i>
-                                <span>Näytä koodi!</span>
+                                <span>View the code!</span>
                             </a>
                         </div>
                     </div>
@@ -161,17 +160,18 @@
                 </div>
             </div>
             <div class="Project">
-                <h1>4# Pizza-verkkokauppa - Backend</h1>
+                <h1>4# Pizza online store - Backend</h1>
                 <div>
                     <div>
                         <p class="Project-introduction">
-                            Tämä on pizza-verkkokaupan MongoDB-tietokantaan yhteydessä 
-                            oleva Express-taustajärjestelmä. Jotkin rajapinnat vaativat 
-                            käyttäjän autentikointia, joka suoritetaan tokenilla. 
-                            Tämän projektin aikana opin sekä MongoDB-tietokannan 
-                            hallinnoimisesta Mongoose-kirjaston avulla, että käyttäjän 
-                            autentikoinnista JSONWebTokenia käyttäen.<br/><br/>
-                            Rajapinnat: GET "/", POST "/login", POST "/users", 
+                            This is the Express backend of the pizza online store 
+                            which is connected with the MongoDB database. Users 
+                            need to authenticate themselves to use some of the APIs. 
+                            Authentication is achieved by using tokens. During this 
+                            project I learned to manage a MongoDB database through 
+                            the Mongoose library and how the authentication works 
+                            with JSONWebTokens.<br/><br/>
+                            APIs: GET "/", POST "/login", POST "/users", 
                             GET "/users/:username", PUT "/users/:username", 
                             GET "/users/:username/orders" sekä POST "/orders".
                         </p>
@@ -186,7 +186,7 @@
                                 rel="noopener noreferrer external"
                             >
                                 <i class="fab fa-gitlab"></i>
-                                <span>Näytä koodi!</span>
+                                <span>View the code!</span>
                             </a>
                         </div>
                     </div>
